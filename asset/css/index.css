@@ -1,0 +1,21 @@
+.m_table{
+    width:50%;
+    background-color: #FFFFFF;
+}
+
+.table_td {
+    text-align: center;
+    vertical-align: middle;
+    width:50%;
+
+}
+
+tr{
+    height: 60px;
+}
+
+input{
+    height: 100%;
+    width: 90%;
+}
+
