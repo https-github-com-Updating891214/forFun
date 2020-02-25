@@ -22,7 +22,9 @@
 				消息名称
 			</td>
 			<td class="table_td">
-				<input  type="text" name="st_name" placeholder="stRTXX_R/T_SubAddr_WordCnt">
+
+				<input  type="text" name="st_name" id="st_nameID" placeholder="stRTXX_R/T_SubAddr_WordCnt">
+
 			</td>
 		</tr>
 		<tr>
@@ -44,8 +46,8 @@
 			<td class="table_td">
 				<select id="transfer" title="transfer">
                     <option value="none" selected disabled hidden>请选择选项</option>
-                    <option>T(RT发送)</option>
-                    <option>R(RT接收)</option>
+                    <option value="0">T(RT发送)</option>
+                    <option value="1">R(RT接收)</option>
                 </select>
 			</td>
 		</tr>
@@ -59,7 +61,8 @@
                 <select name="subAddress" id="subAddressID" onfocus="listNum_subAdrr()" title="subAddress">
                     <option value="none" selected disabled hidden>请选择选项</option>
                 </select>
-			</td>
+			</td>`
+
 		</tr>
 		<tr>
 			<td style="text-align:center;vertical-align:middle;">
@@ -80,7 +83,7 @@
     <tr>
         <td style="width: 33%;"></td>
         <td style="width:33%" align="center">
-            <button>生成</button>
+            <button id="generation" onclick="generation()">生成</button>
         </td>
         <td style="width: 33%;"></td>
     </tr>

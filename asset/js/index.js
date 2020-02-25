@@ -35,3 +35,29 @@ function listNum_wordCnt(){
     }
 }
 
+//点击生成
+function generation(){
+    //获取消息名称
+    var msgNameObj = document.getElementById("st_nameID");
+    var msgName = msgNameObj.value;
+
+    //获取rt地址
+    var msgRTAddrObj = document.getElementById("RTaddrID");
+    var msgRTAddrValue = msgRTAddrObj.value;
+
+    //获取消息方向
+    var msgDirectionObj = document.getElementById("transfer");
+    var msgDirectionValue = msgDirectionObj.value;
+
+    //获取消息自地址
+    var msgSubAddrObj = document.getElementById("subAddressID");
+    var msgSubAddrValue = msgSubAddrObj.value;
+
+    //获取消息字长度
+    var msgWordCntObj = document.getElementById("wordCntID");
+    var msgWordCntValue = msgWordCntObj.value;
+
+    pywebview.api.printMsg(msgName, msgRTAddrValue, msgDirectionValue, msgSubAddrValue, msgWordCntValue);
+
+}
+
